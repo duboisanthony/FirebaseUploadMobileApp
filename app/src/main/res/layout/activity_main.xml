@@ -81,7 +81,7 @@
         android:layout_toStartOf="@+id/button_upload"
         android:layout_toLeftOf="@+id/button_upload"
         android:gravity="center"
-        android:text="swipe cards"
+        android:text="swipe pictures"
         android:textSize="16sp" />
 
 </RelativeLayout>
