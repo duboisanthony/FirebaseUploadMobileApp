@@ -60,7 +60,7 @@ public class SwipeActivity extends AppCompatActivity {
                     //Log.d("LOADED", "Loop happened");
                     Upload upload = postSnapshot.getValue(Upload.class);
                     upload.setKey(postSnapshot.getKey());
-                    if(upload.getmGotFiltered() != true) {
+                    if(upload.getmGotFiltered() == 0) {
                         mUploads.add(upload);
                     }
                 }
@@ -132,7 +132,7 @@ public class SwipeActivity extends AppCompatActivity {
 
                 Upload obj = (Upload) dataObject;
                 String imageId = obj.getKey();
-                mDatabaseRef.child(imageId).child("mGotFiltered").setValue(true);
+                mDatabaseRef.child(imageId).child("mGotFiltered").setValue(1);
 
                 Toast.makeText(SwipeActivity.this, "Right", Toast.LENGTH_SHORT).show();
             }

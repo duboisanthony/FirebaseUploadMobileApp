@@ -7,8 +7,10 @@ public class Upload {
     private String mName;
     private String mImageUrl;
     private String mKey;
+    private int mGotFiltered;
+
 //    private String mGotFiltered;
-    private boolean mGotFiltered;
+//    private boolean mGotFiltered;
 
     public Upload(){
         //empty constructor needed
@@ -23,7 +25,7 @@ public class Upload {
 //        mImageUrl = imageUrl;
 //        mGotFiltered= false;
 //    }
-    public Upload(String name, String imageUrl, Boolean b){
+    public Upload(String name, String imageUrl, int b){
         if(name.trim().equals("")){
             name = "No Name";
 
@@ -65,11 +67,18 @@ public class Upload {
 //    public void setmGotFiltered(String b){
 //        mGotFiltered = b;
 //    }
-    public Boolean getmGotFiltered(){
+//    public Boolean getmGotFiltered(){
+//    return mGotFiltered;
+//}
+//
+//    public void setmGotFiltered(Boolean b){
+//        mGotFiltered = b;
+//    }
+    public int getmGotFiltered(){
     return mGotFiltered;
 }
 
-    public void setmGotFiltered(Boolean b){
+    public void setmGotFiltered(int b){
         mGotFiltered = b;
     }
 

@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
                     Uri downloadUrl = urlTask.getResult();
 
                     Log.d(TAG, "onSucess: firebase download url: " + downloadUrl.toString());
-                    Upload upload = new Upload(mEditTextFileName.getText().toString().trim(), downloadUrl.toString(), false);
+                    Upload upload = new Upload(mEditTextFileName.getText().toString().trim(), downloadUrl.toString(), 0);
 
                     String uploadId = mDatabaseRef.push().getKey();
                     mDatabaseRef.child(uploadId).setValue(upload);
