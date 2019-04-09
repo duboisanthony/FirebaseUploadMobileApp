@@ -29,6 +29,8 @@ import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import java.sql.Timestamp;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -154,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
                     Uri downloadUrl = urlTask.getResult();
 
                     Log.d(TAG, "onSucess: firebase download url: " + downloadUrl.toString());
-                    Upload upload = new Upload(mEditTextFileName.getText().toString().trim(), downloadUrl.toString(), 0);
+                    Upload upload = new Upload(mEditTextFileName.getText().toString().trim(), downloadUrl.toString(), 0, 0, 0, 0);
 
                     String uploadId = mDatabaseRef.push().getKey();
                     mDatabaseRef.child(uploadId).setValue(upload);

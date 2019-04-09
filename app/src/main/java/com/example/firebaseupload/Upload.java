@@ -8,6 +8,9 @@ public class Upload {
     private String mImageUrl;
     private String mKey;
     private int mGotFiltered;
+    private int mLikes;
+    private int mOwnerId;
+    private int mTimeStamp;
 
 //    private String mGotFiltered;
 //    private boolean mGotFiltered;
@@ -25,7 +28,7 @@ public class Upload {
 //        mImageUrl = imageUrl;
 //        mGotFiltered= false;
 //    }
-    public Upload(String name, String imageUrl, int b){
+    public Upload(String name, String imageUrl, int b, int likes, int owner, int time){
         if(name.trim().equals("")){
             name = "No Name";
 
@@ -33,6 +36,9 @@ public class Upload {
         mName = name;
         mImageUrl = imageUrl;
         mGotFiltered= b;
+        mLikes = likes;
+        mOwnerId = owner;
+        mTimeStamp = time;
     }
 
 //    public Upload(String name, String imageUrl, String filtered){
@@ -80,6 +86,30 @@ public class Upload {
 
     public void setmGotFiltered(int b){
         mGotFiltered = b;
+    }
+
+    public int getmLikes(){
+        return mLikes;
+    }
+
+    public void setmLikes(int b){
+        mLikes = b;
+    }
+
+    public int getmOwnerId(){
+        return mOwnerId;
+    }
+
+    public void setmOwnerId(int b){
+        mOwnerId = b;
+    }
+
+    public int getmTimeStamp(){
+        return mTimeStamp;
+    }
+
+    public void setmTimeStamp(int b){
+        mTimeStamp = b;
     }
 
     @Exclude
